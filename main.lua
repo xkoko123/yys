@@ -3,7 +3,7 @@ iphone = {}
 iphone.zunbei = {color={{1575, 633, 0xd2ae7c}, {1560, 621, 0xfff2ce}, {1598, 637, 0xd18444}}}
 
 --战斗中
-iphone.zandouzon = {color={{1719, 773, 0x291a19}, {1765, 674, 0x5b5467}, {126, 51, 0xd6c4a1}, {1780, 78, 0x704a23}}}
+iphone.zandouzon = {color={{1773, 634, 0x42326b},{1776, 508, 0x745d47},{1786, 568, 0xa2917d}}}
 
 --胜利失败
 iphone.senli1 = {color={{712, 219, 0xcebfab}, {715, 193, 0x7c1910}, {691, 229, 0x931b11}}}
@@ -14,8 +14,8 @@ iphone.zuduisibai = {color={{700, 113, 0x4f4758}, {678, 153, 0x5b5265}, {698, 14
 iphone.zuduisenli = {color={{714, 127, 0x7c1910}, {693, 165, 0x941b11}, {705, 147, 0xccbda8}}}
 
 --满级标志
-iphone.manji = {color={{390, 166, 0xec9119}, {387, 174, 0xfebc11}, {402, 171, 0xffaf15}}, region={37,150,1469,717}}
-
+-- iphone.manji = {color={{390, 166, 0xec9119}, {387, 174, 0xfebc11}, {402, 171, 0xffaf15}}, region={189, 274, 1464, 739}}
+iphone.manji = {color={{263, 457, 0xff9e1a}, {268, 473, 0xffe405}, {249, 474, 0xfbe505}}, region={152, 219, 1527, 758}}
 --接受拒绝邀请按钮 (平常与超鬼王)
 iphone.jiesouyaoqinmoren = {color={{358, 288, 0xedc791}, {358, 308, 0x55af5f}, {382, 300, 0x62bb6c}, {357, 322, 0x87705c}}}
 iphone.jiesouyaoqin = {color={{250, 304, 0x5eb969}, {250, 280, 0x856e58}, {270, 286, 0x58b563}}}
@@ -27,22 +27,26 @@ iphone.jiesouyaoqin2 = {color={{246, 431, 0x56b361}, {266, 414, 0x5eb869}, {252,
 iphone.xiezanduiwujiemian = {color={{138, 41, 0xf6e9ab}, {1650, 583, 0x63525a}, {602, 369, 0xbbaf8f}}}
 
 
+--寨结界 界面
+iphone.zaijiejie = {color={{264, 756, 0xc9a87b},{1520, 76, 0xe8d4cf},{1016, 56, 0xe4c55b}}}
+--个人结界 界面
+iphone.gerenjiejie = {color={{420, 716, 0xf3b25e},{352, 628, 0xa5521e},{1520, 76, 0xe8d4cf}}}
 
-iphone.zaimianban = {color={{1520, 78, 0xe8d4cf}, {248, 30, 0x5a3b21}, {873, 65, 0xf8f3e0}, {1017, 58, 0xe2c258}, {1471, 788, 0x3f3541}, {289, 431, 0x524234}}}
 
 --寨结界的进攻按钮 多个点，点击第一个
 --寨的，寨的左右都有黄色{}
-iphone.jiejiejingon1 = {color={{1303, 400, 0xf3b25e}, {1119, 398, 0xf3b25e}, {1211, 399, 0xcbb59c}, {1305, 459, 0x6a4737}}, region={244, 12, 1572, 818}}
+iphone.zaijiejiejinggong = {color={{1303, 400, 0xf3b25e}, {1119, 398, 0xf3b25e}, {1211, 399, 0xcbb59c}, {1305, 459, 0x6a4737}}, region={244, 12, 1572, 818}}
 
 --个人的，个人的只有一个黄色
-iphone.jiejiejingon = {color={{988, 545, 0xf3b25e}, {920, 516, 0x983d2e}, {1056, 572, 0x973c2e}, {991, 577, 0xd78230}}, region={244, 12, 1572, 818}}
+iphone.gerenjiejiefankuai = {color={{509, 130, 0xd1c2af}, {507, 115, 0x9d8b77}, {318, 162, 0x9c8976}, {351, 171, 0x603f20}}, region={298, 89, 1495, 579}}
+iphone.gerenjiejiejinggong = {color={{988, 545, 0xf3b25e}, {920, 516, 0x983d2e}, {1056, 572, 0x973c2e}, {991, 577, 0xd78230}}, region={244, 12, 1572, 818}}
 
--- iphone.jiejiejingon = {color={{912, 513, 0xf3b25e}, {822, 513, 0xcbb59c}, {732, 509, 0xf3b25e}}, region={607, 98, 1422, 775}}
--- --寨结界 每一个人的小方框，第一个点中间点击位置，注意要把右上角点上，表示不打失败的
--- iphone.zaijiejie_fankuan = {color={{832, 346, 0xd5c8b8}, {637, 280, 0xc6b29b}, {1010, 280, 0xc6b29b}, {694, 382, 0x4f3e1e}, {726, 352, 0x3f2b29}}, region={299, 104, 1512, 617}}
+iphone.gerenjiejiesuzi8 = {color={{498, 624, 0x792e0a}, {505, 623, 0xebe6d4}, {511, 624, 0x742b08}, {505, 619, 0x792c09}, {505, 629, 0x7a2c09}, {499, 629, 0xc4beae}, {509, 618, 0xe0dbc9}, {499, 619, 0x9d9687}, {505, 633, 0xb5ad9d}}}
+iphone.jiejiesibaiarrow = {color={{659, 444, 0xdbba63}, {682, 426, 0xa73131}, {684, 435, 0xb03737}, {670, 437, 0x49382a}}, region={563, 84, 1502, 573}}
 
-iphone.zaijiejie_fankuan = {color={{841, 193, 0xd5c8b8}, {1011, 127, 0xc6b29b}, {1005, 263, 0xab8e6c}, {640, 261, 0x9b8774}, {640, 131, 0x9b8774}}, region={299, 104, 1512, 617}}
-iphone.jiejiejingon_hui = {color={{1302, 561, 0xb0a9a1}, {1121, 559, 0xf3b25e}, {1372, 535, 0x685e5d}, {1395, 565, 0xcbb59c}}, region={607, 98, 1422, 775}}
+
+iphone.zaijiejie_fankuan = {color={{844, 194, 0xd5c8b8}, {671, 187, 0x5e3d1e}, {1007, 131, 0x9b8774}, {1003, 260, 0xddcfb7}}, region={622, 86, 1413, 436}}
+iphone.zaijiejiejingon_hui = {color={{1302, 561, 0xb0a9a1}, {1121, 559, 0xf3b25e}, {1372, 535, 0x685e5d}, {1395, 565, 0xcbb59c}}, region={607, 98, 1422, 775}}
 
 
 --正在经验探索里面
@@ -55,6 +59,15 @@ iphone.tansuofanhui = {color={{130, 74, 0xf0f5fb}}}
 --战斗中界面来消息了震动
 iphone.message = {color={{224, 20, 0xc8cbd7},{225, 32, 0xc6c8d6}}}
 iphone.messagepop = {color={{232, 115, 0xd6c9b9},{232, 128, 0xd6c9b9},{231, 146, 0xd6c9b9},{223, 128, 0xd6c9b9}}}
+
+--战斗中认输按钮
+iphone.rensu = {color={{132, 37, 0x3c3526}}}
+iphone.rensuqueren = {color={{1017, 488, 0xf3b25e}}}
+
+--痴界面，第一个点是挑战
+iphone.yeyuanhuo = {color={{1499, 740, 0xe3d8c2}, {1248, 316, 0xdc81b3}, {1127, 316, 0x261d20}, {1193, 523, 0x2eac91}, {1038, 497, 0xb93729}}}
+
+iphone.zuduijiemian = {color={{221, 64, 0xe3decc}, {138, 42, 0xf5e6a7}, {275, 101, 0x7e532b}, {1530, 112, 0x473028}, {275, 673, 0x3d2423}}}
 pad = {}
 
 ------------------------------
@@ -85,14 +98,30 @@ CLICK_ZUNBEI = true
 -- 困28队长走了自动退出
 K28TUICU = false
 
+-- 自动认输
+RENSU = false
+
 -- 上一次遇见未知场景的时间
 LAST_UNKNOW_TIME = 0
+
+--个人结界认输保级 最后一个结界输4次
+BAOJI = false
+RENSU_COUNT = 0
+
+fwShowWnd("msgwnd",Width-400, -1, Width, 20,0); 
+function setText(text)
+    local xx = string.format(" 胜:%d 负:%d",SENLI_COUNT, SIBAI_COUNT)
+    fwShowTextView("msgwnd","msg",text..xx,"left","EFD4CF","183F76",10,0,0,0,400,20,1,0)
+    mSleep(100)
+end
+
 
 -- 返回true表示已经手工点准备了
 function manji_jianca()
     keepScreen(false)
     --检查满级个数
-    local count = Auto.find_colors_all(Btns.manji,90,10,100)
+    local count = Auto.find_colors_all(Btns.manji,95,50,100)
+
     count = #count
     setText(string.format("准备: 满级%d个",count))
 
@@ -113,18 +142,14 @@ function manji_jianca()
     return false
 end
 
-fwShowWnd("msgwnd",Width-400, -1, Width, 20,0); 
-function setText(text)
-    local xx = string.format(" 胜:%d 负:%d",SENLI_COUNT, SIBAI_COUNT)
-    fwShowTextView("msgwnd","msg",text..xx,"left","EFD4CF","183F76",10,0,0,0,400,20,1,0)
-    mSleep(100)
-end
+
 
 function battle() 
     if Auto.is_colors(Btns.zandouzon) then
         keepScreen(false)
         log("战斗中","阴阳师")
         local begin = os.time()
+        
         while Auto.is_colors(Btns.zandouzon) do
             if RANDOM_CLICK and math.random()<0.01 then
                 Auto.swipe(math.random(Width/6, Width/6*5), math.random(Height/4, Height/4*3), math.random(Width/6, Width/6*5), math.random(Height/4, Height/4*3))
@@ -157,6 +182,21 @@ function battle()
         else
             setText("准备")
         end
+        
+        if RENSU == true or RENSU_COUNT > 0 then
+            RENSU_COUNT = RENSU_COUNT - 1
+            toast(string.format("认输咯,还要认输%d次", RENSU_COUNT),1)
+            while Auto.is_colors(Btns.zunbei) or Auto.is_colors(Btns.zandouzon) do
+                Auto.click_mask(Btns.rensu)
+                mSleep(700)
+            end
+            while Auto.is_colors(Btns.rensuqueren) do
+                Auto.click_mask(Btns.rensuqueren)
+                mSleep(500)
+            end
+            return true
+        end
+
 
         Auto.click_mask(Btns.zunbei,15)
         mSleep(200)
@@ -262,54 +302,87 @@ end
 
 
 function yinyanzai()
-    if Auto.is_colors(Btns.zaimianban) == false then
-        return false
-    end
-    keepScreen(false)
-    setText("阴阳寨")
-
-    local fankuai_x, fankuai_y = Auto.find_colors(Btns.zaijiejie_fankuan,99)
-    if fankuai_x ~= -1 then
-        Auto.click(fankuai_x,fankuai_y,15)
-        mSleep(1000)
-
-        local x,y = Auto.find_colors(Btns.jiejiejingon_hui,95,0)
-        if x ~= -1 then
-            for i = 1, 10, 1 do
-                toast("没次数咯没次数咯",0.5)
-                vibrator()
-                mSleep(500)
-            end
-            finish()
-            return true
-        end
-        --先找寨结界的进攻按钮
-        local x, y = Auto.find_colors(Btns.jiejiejingon1,95,0)
-        if x ~= -1 then
-            Auto.click(x,y,10)
-            mSleep(1000)
-            return true
-        else
-            --找个人结界的进攻按钮
-            local x1, y1 = Auto.find_colors(Btns.jiejiejingon,95,0)
-            if x1 ~= -1 then
-                Auto.click(x1,y1,10)
-                mSleep(1000)
-                return true
-            --找不到关闭面板
-            else
-                Auto.click(fankuai_x,fankuai_y,10)
-                mSleep(1000)
-                return true
+    if Auto.is_colors(Btns.zaijiejie) == true then
+        setText("寨结界界面")
+        keepScreen(false)
+        RENSU_COUNT = 0
+        local fankuai_x, fankuai_y = Auto.find_colors(Btns.zaijiejie_fankuan,96)
+        if fankuai_x ~= -1 then
+            Auto.click(fankuai_x,fankuai_y,15)
+            mSleep(500)
+            for i=0,4,1 do
+                local x,y = Auto.find_colors(Btns.zaijiejiejingon_hui,95,0)
+                if x ~= -1 then
+                    for i = 1, 10, 1 do
+                        toast("没次数咯没次数咯",0.5)
+                        vibrator()
+                        mSleep(500)
+                    end
+                    finish()
+                    return true
+                end
+                x, y = Auto.find_colors(Btns.zaijiejiejinggong,90,0)
+                if x ~= -1 then
+                    nLog("找到结界进攻按钮"..i)
+                    Auto.click(x,y,10)
+                    mSleep(200)
+                    x, y = Auto.find_colors(Btns.zaijiejiejinggong,90,0)
+                    if x ~= -1 then
+                        Auto.click(fankuai_x,fankuai_y,15)
+                    end
+                    mSleep(800)
+                    return true
+                end
+                mSleep(200)
             end
         end
-    elseif fankuai_x == -1 then
-        toast("找不到方块 滑动",0.2)
-        Auto.swipe(Width/2, 450, Width/2, 200)
-        mSleep(1000)
         return true
+    elseif Auto.is_colors(Btns.gerenjiejie) == true then
+        keepScreen(false)
+        setText("个人结界界面")
+        if BAOJI == true then
+            if Auto.is_colors(Btns.gerenjiejiesuzi8) then
+                mSleep(1000)
+                local xx,yy = Auto.find_colors(Btns.jiejiesibaiarrow,95)
+                if xx == -1 then
+                    RENSU_COUNT = 4
+                    toast(string.format("最后一个认输4次"))
+                end
+            end
+        end
+        local fankuai_x, fankuai_y = Auto.find_colors(Btns.gerenjiejiefankuai,95)
+        if fankuai_x ~= -1 then
+            nLog("找到方块块")
+            Auto.click(fankuai_x,fankuai_y,15)
+            mSleep(500)
+            for i=0,4,1 do
+                x, y = Auto.find_colors(Btns.gerenjiejiejinggong,90,0)
+                if x ~= -1 then
+                    nLog("找到结界进攻按钮"..i)
+                    Auto.click(x,y,10)
+                    mSleep(200)
+                    x,y = Auto.find_colors(Btns.gerenjiejiejinggong,90,0)
+                    if x ~= -1 then
+                        Auto.click(fankuai_x,fankuai_y,15)
+                    end
+                    mSleep(800)
+                    return true
+                end
+                mSleep(200)
+            end
+            
+            return true
+        end
     end
     return false
+
+    
+    -- elseif fankuai_x == -1 then
+    --     toast("找不到方块 滑动",0.2)
+    --     Auto.swipe(Width/2, 450, Width/2, 200)
+    --     mSleep(1000)
+    --     return true
+    -- end
 end
 
 --困28 自动退队
@@ -347,6 +420,30 @@ function zidonfanhui28()
     return false
 end
 
+function qiangce()
+    if Auto.is_colors(Btns.zuduijiemian) then
+        keepScreen(false)
+        while Auto.is_colors(Btns.zuduijiemian) do
+            toast("抢啊！")
+            r = math.random()
+            if r<0.85 then
+                Auto.click(750,721,20)
+                mSleep(r*10)
+                Auto.click(1423,259,20)
+                mSleep(r*10)
+            elseif r <0.97 then
+                toast("小休息")
+                mSleep(math.random(300,700))
+            else
+                toast("大休息")
+                mSleep(math.random(1000,2000))
+            end
+            
+        end
+        return true
+    end
+    return false
+end
 
 function finish()
     toast("收工了~~",5)
@@ -377,6 +474,20 @@ function show_setting()
     
     UILabel(1,"困28自动退出",15,"left","255,0,0",150,1)
     UISwitch(1,"k28tuicu","off","m","left")
+    
+    UILabel(1,"个人结界9输4保级",15,"left","255,0,0",150,1)
+    UISwitch(1,"ninefour","on","m","left")
+    
+    UILabel(1,"地鬼小动物",15,"left","255,0,0",150,1)
+    UISwitch(1,"rican","off","m","left")
+
+    
+    UILabel(1,"直接认输",15,"left","255,0,0",150,1)
+    UISwitch(1,"rensu","off","m","left")
+    
+
+    
+
     UILabel(1,"有邀请接受邀请 攻打完返回桌面\n如果在阴阳寨界面就自动打结界\n随机点:战斗时随机滑动\n点准备:由于组队时不需要手动点准备\n困28队长走了自动退出,平时不需要开",15,"left","255,0,0",-1,1)
 
     UIShow()
@@ -407,6 +518,23 @@ function show_setting()
     else
         K28TUICU = false
     end
+    
+    --结界9次输4次保级
+    if ninefour == "on" then
+        BAOJI = true
+    else
+        BAOJI = false
+    end
+
+    if rensu == "on" then
+        RENSU = true
+    else
+        RENSU = false
+    end
+
+    if rican == "on" then
+        script_switch("lua","rican")
+    end
 
 
     BATTLE_TIMES = tonumber(count)
@@ -416,11 +544,23 @@ end
 show_setting()
 
 
--- if isFrontApp("com.netease.onmyoji") == 0 then
---     runApp("com.netease.onmyoji")
---     mSleep(0)
+-- function rungame()
+--     if isFrontApp("com.netease.onmyoji") == 0 then
+--         toast("启动游戏",1)
+--         closeApp("com.netease.onmyoji")
+--         mSleep(1000)
+--         runApp("com.netease.onmyoji")
+        
+--         mSleep(2000)
+        
+--         Auto.click(893,713)
+--         mSleep(2000)
+--     else
+--         toast("运行中",1)
+--     end
 -- end
-
+-- rungame()
+ 
 function main()
     keepScreen(true)
     if (SENLI_COUNT + SIBAI_COUNT >= BATTLE_TIMES) then
@@ -439,24 +579,39 @@ function main()
         elseif yaoqin() then
             mSleep(70)
             LAST_UNKNOW_TIME = 0
+            RENSU_COUNT = 0
         elseif yinyanzai() then
             mSleep(70)
             LAST_UNKNOW_TIME = 0
         elseif K28TUICU==true and zidonfanhui28() then
             mSleep(70)
             LAST_UNKNOW_TIME = 0
+            RENSU_COUNT = 0
+        elseif AUTO.is_colors_tap(Btns.yeyuanhuo) then
+            mSleep(600)
+        elseif qiangce() then
+            mSleep(500)
         else
             if LAST_UNKNOW_TIME == 0 then
                 setText("00 unknow@")
                 LAST_UNKNOW_TIME = os.time()
                 mSleep(50)
             else
-                if os.time() - LAST_UNKNOW_TIME < 6 then
-                    setText(string.format("%02d unknow@", os.time()-LAST_UNKNOW_TIME))
-                    mSleep(50)
+                t = os.time() - LAST_UNKNOW_TIME
+                setText(string.format("%02d unknow", t))
+                if t < 1 then
+                    mSleep(450)
+                elseif t < 2 then
+                    mSleep(200)
+                elseif t < 6  then
+                    mSleep(100)
+                elseif t < 50 then
+                    mSleep(600)
                 else
-                    setText(string.format("%02d unknow", os.time()-LAST_UNKNOW_TIME))
-                    mSleep(1500)
+                    vibrator()
+                    mSleep(1000)
+                    vibrator()
+                    mSleep(500)
                 end
             end
                 

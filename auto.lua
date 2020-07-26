@@ -62,13 +62,14 @@ function AUTO.click(x, y, r)
     local up_x = down_x + math.random(-5,5)
     local up_y = down_y + math.random(-5,5)
 
-    AUTO.showFinger(down_x,down_y,200)
+    AUTO.showFinger(down_x,down_y,100)
     
     touchDown(down_x, down_y)
-    mSleep(30)
+    mSleep(50)
     touchMove(up_x,up_y)
+    mSleep(45)
     touchUp(up_x, up_y)
-    mSleep(30)
+    mSleep(20)
 end
 
 function AUTO.click_mask(data, r)
@@ -153,8 +154,20 @@ function AUTO.find_colors_all(data, threshold, _count, margin, region)
     local temp_table = {}
     for i,v in ipairs(t) do
         local x,y = v.x, v.y
-        if math.abs(last_x - x) > margin or math.abs(last_y - y) > margin then
+        local need_add = true
+        if #temp_table == 0 then
             table.insert(temp_table,{x,y})
+        else
+            for i2, v2 in ipairs(temp_table) do
+                local x2,y2 = v2[1], v2[2]
+                if math.sqrt((x2 - x)*(x2 - x) + (y2 - y)*(y2 - y)) < margin then
+                    need_add = false
+                    break
+                end
+            end
+            if need_add then
+                table.insert(temp_table,{x,y})
+            end
         end
         last_x, last_y = x, y
     end
