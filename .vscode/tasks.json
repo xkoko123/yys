@@ -1,0 +1,46 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "colorpicker",
+            "type": "shell",
+            "command": "/Users/ayogg/miniconda3/bin/python /Users/ayogg/Code/autotouch_colorpicker/ColorPicker.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "/Users/ayogg/miniconda3/bin/python",
+            "args": [
+                "manage.py",
+                "${file}",
+                "run"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "upload",
+            "type": "shell",
+            "command": "/Users/ayogg/miniconda3/bin/python",
+            "args": [
+                "manage.py",
+                "${file}",
+                "upload"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "stop",
+            "type": "shell",
+            "command": "/Users/ayogg/miniconda3/bin/python",
+            "args": [
+                "manage.py",
+                "${file}",
+                "stop"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

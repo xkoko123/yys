@@ -51,8 +51,12 @@ else
     writeFile(userPath().."/res/cs.txt",{LAST_FEED, LAST_DIGUI},"w",1)
     toast(1213131)
 end
-toast("上次喂养"..LAST_FEED.." 上次地鬼"..LAST_DIGUI, 1)
-mSleep(500)
+if math.abs(LAST_FEED - today) < 2 then
+    toast("今晚记得喂哦".."上次喂养"..LAST_FEED.." 上次地鬼"..LAST_DIGUI,2)
+else
+    toast("上次喂养"..LAST_FEED.." 上次地鬼"..LAST_DIGUI, 1)
+end
+mSleep(1000)
 
 function need_digui()
     if math.abs(LAST_DIGUI - today) == 0  then
@@ -62,7 +66,7 @@ function need_digui()
 end
 
 function need_feed()
-    if math.abs(LAST_FEED - today) < 1 then
+    if math.abs(LAST_FEED - today) < 2 and tonumber(os.date("%H", os.time())) < 23 then
         return false
     end
     return true
@@ -252,16 +256,16 @@ function xiaodonwu()
     end
 end
 
-
-
 while true do
     if multiColor({{1609, 709, 0x782327}, {1643, 659, 0xaa433e}, {1599, 729, 0xd9c7c2}, {1591, 742, 0xcba673}}, 95) then
         Auto.click(1609, 709) 
         mSleep(600)
     elseif Auto.is_colors(Btns.scene_tinyuan) then
         if DIGUI_COUNT == 0 and need_digui() then
+            toast("地鬼")
             Auto.click_mask(Btns.scene_tinyuan)
-        else
+        elseif need_feed() then
+            toast("小动物")
             -- 找小动物饿了
             toast("找小动物找小动物")
             local x,y = findMultiColorInRegionFuzzyByTable({{1385, 408, 0xff6e69}, {1380, 405, 0xf7d58d}, {1376, 399, 0xff6e69}, {1369, 404, 0xf9d798}, {1372, 438, 0xffcf48}},95,944,314,1786,543)
@@ -278,6 +282,13 @@ while true do
             mydate[2] = LAST_DIGUI
             writeFile(userPath().."/res/cs.txt", mydate, "w", 1)
         end
+        if need_feed() == false and need_digui() == false then
+            toast("拜拜咯")
+            playAudio("ooo.mp3")
+            mSleep(2000)
+            lua_exit()
+            mSleep(100)
+        end
         mSleep(800)
     elseif need_digui() and diyuguiwan() then
         mSleep(0)
@@ -286,6 +297,7 @@ while true do
     elseif battle() then
         mSleep(400)
     elseif need_feed() == false and need_digui() == false then
+        toast("拜拜咯")
         playAudio("ooo.mp3")
         mSleep(2000)
         lua_exit()
