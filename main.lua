@@ -150,7 +150,7 @@ function battle()
             end
         end
         return true
-    elseif Auto.is_colors(Views.senli1,90) or Auto.is_colors(Views.zuduisenli,90) or Auto.is_colors(Views.zandousenlirighttop,90) then
+    elseif Auto.is_colors(Views.senli1) or Auto.is_colors(Views.zuduisenli) or Auto.is_colors(Views.zandousenlirighttop) then
         setText("胜利一")
         if math.random() > 0.5 then
             local x = math.random(0,Width/10)
@@ -189,6 +189,7 @@ function battle()
             LAST_BATTLE_TIME = os.time()
             SENLI_COUNT = SENLI_COUNT + 1
         end
+        mSleep(300)
         return true
 
     elseif Auto.is_colors(Views.sibai) or Auto.is_colors(Views.zuduisibai) then
@@ -215,7 +216,6 @@ function battle()
     end
     return false
 end
-
 
 function yaoqin()
     if Auto.is_colors(Views.jiesouyaoqinmoren) or Auto.is_colors(Views.jiesouyaoqinmoren2) then
@@ -247,7 +247,6 @@ function yaoqin()
     end
     return false
 end
-
 
 function yinyanzai()
     if Auto.is_colors(Views.zaijiejie) == true then
@@ -328,11 +327,12 @@ end
 
 --困28 自动退队
 function zidonfanhui28()
-    duizan_tubiao = {color={{126, 164, 0x5f3e1f},{126, 138, 0xf6f1b5},{138, 152, 0x4e3014}}}
-    if Auto.is_colors(Views.tansuolei,95) == false then
+    -- duizan_tubiao = {color={{126, 164, 0x5f3e1f},{126, 138, 0xf6f1b5},{138, 152, 0x4e3014}}}
+    duizan_tubiao = {color={{154, 531, 0xf9faf1}, {152, 507, 0xb12d37}}}
+    if Auto.is_colors(Views.tansuolei,90) == false then
         return false
     end
-    if Auto.is_colors(duizan_tubiao, 95,0) == false then
+    if Auto.is_colors(duizan_tubiao, 90) == false then
         setText("队长跑啦")
         if math.random()<0.1 then
             mSleep(500)
@@ -398,38 +398,87 @@ function finish()
 end
 
 
+
+-- 临时活动都放这里，，没活动清空返回false就行了
+-- 临时活动都放这里，，没活动清空返回false就行了
+-- 临时活动都放这里，，没活动清空返回false就行了
+-- 临时活动都放这里，，没活动清空返回false就行了
+-- 临时活动都放这里，，没活动清空返回false就行了
+function linsihuodong()
+    if multiColor({{132, 51, 0xf4e4a4},{1500, 58, 0xffffe6},{848, 167, 0x441d32}}) then
+        x,y = findMultiColorInRegionFuzzy(0xffffda, "12|4|0xffffda", 90, 449, 374, 1400, 757)
+        if x ~= -1 then
+            Auto.click(x,y,20)
+            mSleep(600)
+            return true
+        end
+    end
+    
+    if multiColor({{1575, 686, 0xf1dfbd},{1490, 149, 0xcbbab6},{1499, 56, 0xffffeb}}) then
+        Auto.click(1572,712,20)
+        mSleep(600)
+        return true
+    end
+    if multiColor({{907, 91, 0x831a11},{831, 104, 0xe4d8c3},{1121, 185, 0xd7413a},{835, 242, 0x403d39}}) then
+        Auto.click(math.random(0,Width/10), math.random(Height/5,Height/5*4), 15)
+        mSleep(500)
+        Auto.click(math.random(0,Width/10), math.random(Height/5,Height/5*4), 15)
+        return true
+    end
+    return false
+end
+
+
+function luanqibazao()
+    -- 点业原火
+    if AUTO.is_colors_tap(Views.yeyuanhuo) then
+        return true
+    -- 点御灵
+    elseif AUTO.is_colors_tap(Views.yulin) then
+        return true
+    elseif qiangce() then
+        return true
+    -- 临时活动
+    elseif linsihuodong() then
+        return true
+    end
+    return false
+end
+
 function show_setting()
     local h,w = getScreenSize()
     UINew(1,"傻逼阴阳师","确定","取消","dsfds.dat",1,0,Width/2,Height,"255,255,255","255,255,255","","dot",1)
-    UICombo(1,"manji","1个满级提醒,2个满级提醒,3个满级提醒,不提醒","1",400)
+    UICombo(1,"manji","1个满级提醒,2个满级提醒,3个满级提醒,不提醒","1",Width/2.9)
 
-    UILabel(1,"攻打次数",15,"left","255,0,0",150,1)
+    UILabel(1,"攻打次数",15,"left","255,0,0",Width/4,1)
     UIEdit(1,"count","打几次","30",15,"left","38,38,38","number",300)
 
-    UILabel(1,"随机点",15,"left","255,0,0",150,1)
-    UISwitch(1,"suijidian","off","m","left")
-
-    UILabel(1,"点准备",15,"left","255,0,0",150,1)
+    UILabel(1,"点准备",15,"left","255,0,0",Width/4,1)
     UISwitch(1,"dianzunbei","on","m","left")
     
-    UILabel(1,"困28自动退出",15,"left","255,0,0",150,1)
+    UILabel(1,"困28自动退出",15,"left","255,0,0",Width/4,1)
     UISwitch(1,"k28tuicu","off","m","left")
-    
-    UILabel(1,"个人结界9输4保级",15,"left","255,0,0",150,1)
-    UISwitch(1,"ninefour","on","m","left")
-    
-    UILabel(1,"地鬼小动物",15,"left","255,0,0",150,1)
+        
+    UILabel(1,"日常地鬼喂养",15,"left","255,0,0",Width/4,1)
     UISwitch(1,"rican","off","m","left")
 
-    
-    UILabel(1,"直接认输",15,"left","255,0,0",150,1)
-    UISwitch(1,"rensu","off","m","left")
-    
-    UILabel(1,"自动标怪",15,"left","255,0,0",250,1)
+    UILabel(1,"自动标怪",15,"left","255,0,0",Width/4,1)
     UISwitch(1,"zidongbiaoguai","off","m","left")
 
-    UILabel(1,"重新标记",15,"left","255,0,0",250,1)
+    UILabel(1,"重新标记",15,"left","255,0,0",Width/4,1)
     UISwitch(1,"conxinbiaoji","off","m","left")
+
+    UILabel(1,"直接认输",15,"left","255,0,0",Width/4,1)
+    UISwitch(1,"rensu","off","m","left")
+
+    UILabel(1,"个人结界9输4保级",15,"left","255,0,0",Width/4,1)
+    UISwitch(1,"ninefour","on","m","left")
+
+    UILabel(1,"随机点",15,"left","255,0,0",Width/4,1)
+    UISwitch(1,"suijidian","off","m","left")
+
+
+
 
     
 
@@ -496,53 +545,6 @@ function show_setting()
 
 
     BATTLE_TIMES = tonumber(count)
-end
-
-
--- 临时活动都放这里，，没活动清空返回false就行了
--- 临时活动都放这里，，没活动清空返回false就行了
--- 临时活动都放这里，，没活动清空返回false就行了
--- 临时活动都放这里，，没活动清空返回false就行了
--- 临时活动都放这里，，没活动清空返回false就行了
-function linsihuodong()
-    if multiColor({{132, 51, 0xf4e4a4},{1500, 58, 0xffffe6},{848, 167, 0x441d32}}) then
-        x,y = findMultiColorInRegionFuzzy(0xffffda, "12|4|0xffffda", 90, 449, 374, 1400, 757)
-        if x ~= -1 then
-            Auto.click(x,y,20)
-            mSleep(600)
-            return true
-        end
-    end
-    
-    if multiColor({{1575, 686, 0xf1dfbd},{1490, 149, 0xcbbab6},{1499, 56, 0xffffeb}}) then
-        Auto.click(1572,712,20)
-        mSleep(600)
-        return true
-    end
-    if multiColor({{907, 91, 0x831a11},{831, 104, 0xe4d8c3},{1121, 185, 0xd7413a},{835, 242, 0x403d39}}) then
-        Auto.click(math.random(0,Width/10), math.random(Height/5,Height/5*4), 15)
-        mSleep(500)
-        Auto.click(math.random(0,Width/10), math.random(Height/5,Height/5*4), 15)
-        return true
-    end
-    return false
-end
-
-
-function luanqibazao()
-    -- 点业原火
-    if AUTO.is_colors_tap(Views.yeyuanhuo) then
-        return true
-    -- 点御灵
-    elseif AUTO.is_colors_tap(Views.yulin) then
-        return true
-    elseif qiangce() then
-        return true
-    -- 临时活动
-    elseif linsihuodong() then
-        return true
-    end
-    return false
 end
 
 

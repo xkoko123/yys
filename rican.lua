@@ -51,12 +51,17 @@ else
     writeFile(userPath().."/res/cs.txt",{LAST_FEED, LAST_DIGUI},"w",1)
     toast(1213131)
 end
-if math.abs(LAST_FEED - today) < 2 then
-    toast("今晚记得喂哦".."上次喂养"..LAST_FEED.." 上次地鬼"..LAST_DIGUI,2)
+
+if math.abs(LAST_FEED - today) >= 2 then
+    toast("今晚记得上线喂动物哦!".." 上次喂养:"..LAST_FEED.." 上次地鬼:"..LAST_DIGUI,2)
+    vibrator()
+    mSleep(700)
+    vibrator()
+    mSleep(700)
 else
-    toast("上次喂养"..LAST_FEED.." 上次地鬼"..LAST_DIGUI, 1)
+    toast("上次喂养:"..LAST_FEED.." 上次地鬼:"..LAST_DIGUI.." 今天:"..today, 1)
+    mSleep(1000)
 end
-mSleep(1000)
 
 function need_digui()
     if math.abs(LAST_DIGUI - today) == 0  then
@@ -66,12 +71,11 @@ function need_digui()
 end
 
 function need_feed()
-    if math.abs(LAST_FEED - today) < 2 and tonumber(os.date("%H", os.time())) < 23 then
-        return false
+    if math.abs(LAST_FEED - today) >= 2 and tonumber(os.date("%H", os.time())) > 23 then
+        return true
     end
-    return true
+    return false
 end
-
 
 fwShowWnd("msgwnd",Width-400, -1, Width, 20,0); 
 function setText(text)

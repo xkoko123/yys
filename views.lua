@@ -58,7 +58,7 @@ iphone.zaijiejiejingon_hui = {color={{1302, 561, 0xb0a9a1}, {1121, 559, 0xf3b25e
 
 
 --正在经验探索里面
-iphone.tansuolei = {color={{1028, 29, 0x82a34f}, {1244, 24, 0xff7f2c}, {1506, 659, 0xff7b2c}}}
+iphone.tansuolei = {color={{1030, 21, 0xfaca3b}, {1041, 40, 0xfadcc2}, {1252, 26, 0xdb3b25}}}
 --经验探索返回确认按钮
 iphone.tansuofanhuiqueren = {color={{1056, 466, 0xf3b25e}, {896, 464, 0xcbb59c}, {738, 462, 0xf3b25e}}}
 --探索返回
