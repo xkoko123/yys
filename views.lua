@@ -79,8 +79,8 @@ iphone.yulin = {color={{1480, 725, 0xe4d9c2}, {1261, 32, 0x9c804d}, {1266, 40, 0
 iphone.zuduijiemian = {color={{221, 64, 0xe3decc}, {138, 42, 0xf5e6a7}, {275, 101, 0x7e532b}, {1530, 112, 0x473028}, {275, 673, 0x3d2423}}}
 
 
-
-
+iphone.douji = {color={{1515, 158, 0xe5b9ba}, {373, 714, 0xe47755}, {421, 753, 0xd9951c}}}
+iphone.doujifanpai = {color={{143, 36, 0xd6c4a1}, {39, 180, 0x826952}, {165, 615, 0x4742b3}}}
 pad = {}
 
 

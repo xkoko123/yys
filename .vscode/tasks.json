@@ -6,7 +6,7 @@
         {
             "label": "colorpicker",
             "type": "shell",
-            "command": "/Users/ayogg/miniconda3/bin/python /Users/ayogg/Code/autotouch_colorpicker/ColorPicker.py",
+            "command": "/Users/ayogg/miniconda3/bin/python /Users/ayogg/Documents/Code/autotouch_colorpicker/ColorPicker.py",
             "problemMatcher": []
         },
         {

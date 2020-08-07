@@ -71,7 +71,7 @@ function need_digui()
 end
 
 function need_feed()
-    if math.abs(LAST_FEED - today) >= 2 and tonumber(os.date("%H", os.time())) > 23 then
+    if math.abs(LAST_FEED - today) >= 2 and tonumber(os.date("%H", os.time())) >= 23 then
         return true
     end
     return false

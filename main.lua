@@ -348,6 +348,20 @@ function zidonfanhui28()
     return false
 end
 
+function doujirensu()
+    if Auto.is_colors(Views.douji) then
+        Auto.click(1390,651)
+        mSleep(500)
+        return true
+    elseif Auto.is_colors(Views.doujifanpai) then
+        Auto.click_mask(Views.doujifanpai)
+        mSleep(600)
+        Auto.click_mask(Views.rensuqueren)
+        mSleep(500)
+        return true
+    end
+    return false
+end
 
 function qiangce()
     if Auto.is_colors(Views.zuduijiemian) then
@@ -571,6 +585,9 @@ function main()
             mSleep(20)
             RENSU_COUNT = 0
         elseif luanqibazao() then
+            mSleep(600)
+            RENSU_COUNT = 0
+        elseif RENSU == true and doujirensu() then
             mSleep(600)
             RENSU_COUNT = 0
         else
